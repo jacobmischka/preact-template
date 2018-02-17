@@ -1,0 +1,32 @@
+{
+	"presets": [
+		["@babel/preset-env", {
+			"targets": {
+				"browsers": [
+					"> 1%",
+					"last 2 versions",
+					"ie >= 9"
+				]
+			},
+			"useBuiltIns": "entry",
+			"include": [
+				"transform-regenerator"
+			],
+			"debug": false,
+			"modules": false
+		}],
+		"@babel/preset-flow",
+		["@babel/preset-react", {
+			"pragma": "h"
+		}]
+	],
+	"plugins": [
+		["module-resolver", {
+			"alias": {
+				"@": "./src"
+			}
+		}],
+		"@babel/plugin-syntax-dynamic-import",
+		"@babel/plugin-proposal-class-properties"
+	]
+}
